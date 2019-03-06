@@ -51,14 +51,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetAdapterSDK">
-      <HintPath>..\bin\Release\DotNetAdapterSDK.dll</HintPath>
+    <Reference Include="MTConnect-NET, Version=2.8.1.29291, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MTConnect.NET.2.8.1.29291\lib\net40\MTConnect-NET.dll</HintPath>
     </Reference>
     <Reference Include="NAudio">
       <HintPath>..\lib\NAudio\NAudio.dll</HintPath>
     </Reference>
     <Reference Include="NAudio.WindowsMediaFormat">
       <HintPath>..\lib\NAudio\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net4-client\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -101,6 +104,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,6 +136,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetAdapterSDK.csproj">
+      <Project>{d8d08dbe-b511-4de0-b5a9-563ebfc60c4f}</Project>
+      <Name>DotNetAdapterSDK</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
